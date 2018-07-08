@@ -1,0 +1,53 @@
+
+.transform(@transform){
+	transform:@transform;
+	-ms-transform:@transform;
+	-o-transform:@transform;
+	-webkit-transform:@transform;
+	-moz-transform:@transform;
+}
+
+.transition(@transition){
+	transition:@transition;
+	-ms-transition:@transition;
+	-o-transition:@transition;
+	-webkit-transition:@transition;
+	-moz-transition:@transition;
+}
+
+.animation(@animate){
+	animation:@animate;
+	-webkit-animation:@animate;
+	-moz-animation:@animate;
+	-o-animation:@animate;
+}
+
+.trans_center(@x,@y){
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	.transform(translate(@x,@y))
+}
+
+.margin_center(@height,@width){
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	margin-top: @height;
+	margin-left: @width;
+}
+
+.limit_one(){
+	overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.limit_row(@num){
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: @num;
+}
+
